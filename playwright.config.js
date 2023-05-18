@@ -35,7 +35,7 @@ module.exports = defineConfig({
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
 
-    headless: false,
+    headless: true,
     browserName:'chromium',
     screenshot: "on",
     trace: "retain-on-failure"
