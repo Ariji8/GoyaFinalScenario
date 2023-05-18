@@ -11,7 +11,7 @@ test.describe('test', () => {
 
     });
 
-test('Order Status', async ({ page }) => {
+test('Validate Order Status', async ({ page }) => {
 
     await page.goto('https://portal-test.goya.com/oms2/#/home')
     //Add assertions to check element
