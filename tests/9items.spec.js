@@ -11,7 +11,7 @@ test.describe('test', () => {
 
     });
     
-    test('Login into the GOYA OMS', async () => {
+    test('Order for Large Customer', async () => {
 
         await page.goto('https://portal-test.goya.com/oms2/#/home')
         //Addd assertions too check element

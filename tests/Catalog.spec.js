@@ -28,8 +28,7 @@ test('Catalog', async ({ page }) => {
     await expect(page.getByRole('textbox', { name: 'Search Customer', exact: true})).toBeEnabled
     await page.getByRole('textbox', { name: 'Search Customer', exact: true }).click();
     await page.getByRole('textbox', { name: 'Search Customer' }).fill('701631');
-    await page.getByRole('row', { name: '701631 RUMBA CUBANA (JC) A $490.29 Customer Statement Preview' }).getByRole('radio').check();
-    await page.getByRole('row', { name: '701631 RUMBA CUBANA (JC) A $490.29 Customer Statement Preview' }).getByRole('radio').press('ScrollLock');
+    await page.getByRole('row', { name: '701631 RUMBA CUBANA (JC) A $299.54 Customer Statement Preview' }).getByRole('radio').check();
     await page.getByRole('button', { name: 'Select' }).click();
     await page.getByRole('button', { name: 'Proceed' }).click();
     //Add assertions to verify the URL of the home page .
