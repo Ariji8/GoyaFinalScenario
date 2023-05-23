@@ -11,7 +11,7 @@ test.describe('test', () => {
 
     });
 
-test('Validate Order Status', async ({ page }) => {
+test('Order Status', async ({ page }) => {
 
     await page.goto('https://portal-test.goya.com/oms2/#/home')
     //Add assertions to check element
@@ -31,7 +31,14 @@ test('Validate Order Status', async ({ page }) => {
     await page.getByRole('button', { name: 'Status focus' }).press('ScrollLock');
     await page.getByRole('option', { name: 'Open', exact: true }).getByText('Open').click();
     await page.waitForTimeout(11000)
-    await page.getByRole('cell', { name: '356302827 (W)' }).click();
+    // await page.getByRole('textbox', { name: 'Customer Order # Status From Date To Date Order Type Sources EOR' }).click();
+    // await page.getByRole('textbox', { name: 'Customer Order # Status From Date To Date Order Type Sources EOR' }).fill('356303375');
+    await page.locator('//*[@id="idd"]/div[1]/div[4]/div[1]/section[4]/div[3]/div[1]/div/table/tbody/tr[1]/td[1]/order-status/span').click();
+    
+    
+    
+    // await page.getByRole('cell', { name: '356303375 (W)' }).click();
+    // await page.getByRole('cell').getByText('(W)').click();
     await page.screenshot({ path: "Pdf.png", fullPage: true })
     const downloadPromise = page.waitForEvent('download');
     await page.locator('#pdf').getByText('PDF').click();
@@ -46,7 +53,7 @@ test('Validate Order Status', async ({ page }) => {
     await page.screenshot({ path: "Cancel.png", fullPage: true })
     await page.getByRole('button', { name: 'No' }).click();
     await page.locator('.table > tbody > tr > td:nth-child(3)').first().click();
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(1100)
     await page.screenshot({ path: "Popup.png", fullPage: true })
     await page.getByRole('button', { name: 'Close' }).click();
     await page.waitForTimeout(5000)
