@@ -61,7 +61,7 @@ test('Order Status', async ({ page }) => {
     await page.getByRole('searchbox', { name: 'Customer' }).click();
     await page.getByText('712457-RUMBA CUBANA OF TONNELLE CORP').click();
     // await page.getByRole('checkbox', { name: 'Need Attention' }).check();
-    // await page.getByRole('checkbox', { name: 'Need Attention' }).uncheck();
+    // awaitt page.getByRole('checkbox', { name: 'Need Attention' }).uncheck();
 
     
     await page.getByRole('listitem').filter({ hasText: 'Home' }).getByRole('link', { name: 'Home' }).click();

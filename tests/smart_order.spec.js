@@ -13,7 +13,7 @@ test.describe('test', () => {
 test('Smart Order', async ({ page }) => {
 
   await page.goto('https://portal-test.goya.com/oms2/#/home');
-  //Add assertions to check element
+  //Addd assertions to check element
   await expect(page.getByPlaceholder('Username')).toHaveCount(1);
   await expect(page.getByPlaceholder('Password')).toHaveCount(1);
   await expect(page.getByRole('button', { name: 'Login' })).toBeEnabled();
