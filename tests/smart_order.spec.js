@@ -10,7 +10,7 @@ test.describe('test', () => {
 
     });
 
-test('Smart Order', async ({ page }) => {
+test('Create Order from Smart Order Page', async ({ page }) => {
 
   await page.goto('https://portal-test.goya.com/oms2/#/home');
   //Addd assertions to check element

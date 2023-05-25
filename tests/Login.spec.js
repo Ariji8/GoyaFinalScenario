@@ -11,7 +11,7 @@ test.describe('test', () => {
 
     });
     
-    test('Login Logout2', async () => {
+    test('Login Logout', async () => {
 
         await page.goto('https://portal-test.goya.com/oms2/#/home')
         //Addd asssertions to chheck element
