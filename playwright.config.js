@@ -94,7 +94,9 @@ module.exports = defineConfig({
     //   use: { ..devices['Desktop Chrome'], channel: 'chrome' },
     // },
   ],
+  retries:1,
   
+
 
 
 
