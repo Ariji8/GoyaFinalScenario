@@ -14,13 +14,13 @@ const { allure } = require('allure-playwright');
 module.exports = defineConfig({
   testDir: './tests',
   /* Run tests in files in parallel */
-  timeout: 200 * 1000,
+  timeout: 150 * 1000,
   expect: {
     /**
      *  Maximum time expect() should wait for the condition to be met.
      * For example in 'await expect(locator).toHaveText();
      */
-    timeout: 200000
+    timeout: 150000
   },
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
