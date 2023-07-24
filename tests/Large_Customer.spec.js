@@ -60,7 +60,7 @@ test.describe('test', () => {
         //Add assertions to verify the Submit button
         await expect(page.getByRole('button', { name: 'Submit', exact: true })).toBeEnabled();
         await page.getByRole('button', { name: 'Submit' }).click();
-        // await page.getByRole('button', { name: 'Continue Without Merge' }).click();
+        await page.getByRole('button', { name: 'Continue Without Merge' }).click();
         await page.getByRole('checkbox').nth(3).check();
 
         if (await page.getByRole('checkbox').nth(3).isVisible()) {
